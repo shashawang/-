@@ -1,0 +1,16 @@
+时间处理相关
+timeNumber(time){
+  return Number(String(time).split(':')[0]+String(time).split(':')[1])
+},
+changeTime() {
+  // if (new Date(this.Form.inputEndTime).getTime() === new Date(this.Form.inputStartTime).getTime()) {
+  //   let startTime = String(this.Form.inputStartTime).split(' ')[4]
+  //   if((this.timeNumber (startTime)>this.timeNumber (this.MorningStartTime))&&(this.timeNumber (startTime)<this.timeNumber (this.MorningEndTime))){
+  //     this.EndTimeOption = [`${startTime} - ${this.MorningEndTime}`,`${this.AfternoonStartTime} - ${this.AfternoonEndTime}`]
+  //   } else if((this.timeNumber (startTime)>this.timeNumber (this.AfternoonStartTime))&&(this.timeNumber (startTime)<this.timeNumber (this.AfternoonEndTime))){
+  //     this.EndTimeOption = [`${startTime} - ${this.AfternoonEndTime}`]
+  //   }
+  // } else {
+  // }
+  this.EndTimeOption = [`${this.MorningStartTime} - ${this.MorningEndTime}`,`${this.AfternoonStartTime} - ${this.AfternoonEndTime}`]
+},
