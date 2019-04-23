@@ -14,3 +14,30 @@ changeTime() {
   // }
   this.EndTimeOption = [`${this.MorningStartTime} - ${this.MorningEndTime}`,`${this.AfternoonStartTime} - ${this.AfternoonEndTime}`]
 },
+
+清除空数据
+checkBlankData() {
+  const blankIndex = []
+  const temp = []
+  for (const j in this.OA_LineList) {
+    if (Object.keys(this.OA_LineList[j]).length === 0) { // JSON.stringify(this.OA_LineList[j]) === '{}'
+      // this.OA_LineList.splice(j, 1)
+      blankIndex.push(j)
+    }
+    // const temp = []
+    // let isBlank = false
+    // for (const i in this.OA_LineList[j]) {
+    //   temp.push(this.OA_LineList[j][i])
+    //   isBlank = temp.every(el => el === '')
+    // }
+    // if (isBlank) {
+    //   this.OA_LineList.splice(j, 1)
+    // }
+  }
+  for (let i = 0; i < this.OA_LineList.length; i++) {
+    if (!blankIndex.includes(String(i))) {
+      temp.push(this.OA_LineList[i])
+    }
+  }
+  this.OA_LineList = temp
+},
