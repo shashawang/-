@@ -41,3 +41,34 @@ checkBlankData() {
   }
   this.OA_LineList = temp
 },
+殚精竭虑的两者必选其一
+
+    // var validateTotalHours = (rule, value, callback) => {
+    //   if (!value) { // 为空，就验证另一个字段是否为空，也是空，就报错。另一个字段是否为空咋判断
+    //     return callback(new Error('请填写请假时长'))//为空，就报错；不为空，查看另一个字段
+    //   }
+    // }
+    // var validateLeaveTimeDay = (rule, value, callback) => {
+    //   let temp = this.Form.OA_LineList
+    //   for (let i in temp) {
+    //     if (!value&&!temp.TotalHours) {
+    //       return callback(new Error('请填写请假时长'))
+    //     } else if (temp[i].LeaveTimeDay === value) {
+    //       let temp2 = 'OA_LineList.' + i + '.LeaveTimeHour'
+    //       this.$refs.form.validateField(temp2)
+    //       return callback()
+    //     }
+    //   }
+    // }
+    // var validateLeaveTimeHour = (rule, value, callback) => {
+    //   let temp = this.Form.OA_LineList
+    //   for (let i in temp) {
+    //     if (!value&&!temp.TotalHours) {
+    //       return callback(new Error('请填写请假时长'))
+    //     } else if (temp[i].LeaveTimeHour === value) {
+    //       let temp2 = 'OA_LineList.' + i + '.LeaveTimeDay'
+    //       this.$refs.form.validateField(temp2)
+    //       return callback()
+    //     }
+    //   }
+    // }
